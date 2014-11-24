@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/**
+ * Vertically align elements to the middle of their container
+ */
+@mixin vertical-align-middle() {
+	position: absolute;
+	top: 50%;
+	@include vendor(transform, translateY(-50%));
+}

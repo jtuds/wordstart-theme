@@ -1,0 +1,29 @@
+Pre launch---
+Tested by minimum 3 people
+Run build tasks
+Validate code to check for obvious bugs
+Backup local and stage databases
+Favicon
+Add Analytics code if needed
+Set blog index reading limit (because commonly set to 1 in testing)
+Ensure Wordpress description is not "Just another Wordpress site"
+Put hosting, domain and database information in Lastpass
+Reassign any posts created in development to client user account
+Set Typography.com fonts to production mode
+Cross browser test
+Cross device test
+Link check
+Tested by minimum 3 people
+Check hosting login details are correct
+Check DNS login details are correct
+
+On launch---
+
+Post launch---
+Link check
+Tested by minimum 3 people
+Use ping checker to check DNS is pointed correctly
+Ensure Email MX records are correct
+Connect Jetpack to Wordpress.com
+Check Jetpack modules (most commonly forms and comments)
+Send form submissions to client specified email addresses and ask for confirmation

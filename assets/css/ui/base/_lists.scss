@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+.list-no-style {
+	margin:0;
+}
+.list-inline li {
+	display:inline-block;
+	vertical-align:top;
+}
+.list-inside {
+	margin:0;
+
+	li {
+		list-style: inside;
+	}
+}
+ul li {
+	list-style-type:square;
+}

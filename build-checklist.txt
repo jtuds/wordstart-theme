@@ -1,0 +1,14 @@
+Download latest Wordpress
+Activate starter theme
+Check script versions, e.g. Modernizr and jQuery
+Set theme paths in functions.php
+Check plugins are up to date, supported and compatible with Wordpress version
+Check SASS version
+Take any required base SCSS files from previous project for quicker setup
+Create local and stage databases
+Setup repository on Beanstalk
+Configure wp-config
+Put database and repo details into Lastpass
+Make sure gitignore file is configured and added
+Push initial git commit to stage
+Migrate local database to stage database

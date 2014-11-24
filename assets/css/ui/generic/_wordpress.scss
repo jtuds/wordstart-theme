@@ -1,0 +1,61 @@
+// Alignment
+// ---------------------------
+.alignleft {
+	float: left;
+	margin-right: $base-spacing-unit; }
+	
+.alignright {
+	float: right;
+	margin-left: $base-spacing-unit; }
+	
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto; }
+
+// Posts
+// ---------------------------
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0; }
+
+.wp-caption {
+	margin-bottom: $base-spacing-unit;
+	max-width: 100%;
+	
+	.wp-caption-text { margin: $half-spacing-unit 0; }
+	
+	img[class*="wp-image-"] {
+		display: block;
+		margin: auto; } }
+		
+.wp-caption-text {
+	@extend .text--center;
+	font-style: italic; }
+	
+.site-content .gallery {
+	margin-bottom: $base-spacing-unit;
+
+	dd { margin: 0; }
+		
+	a img {
+		border: none;
+		height: auto;
+		max-width: 90%; } }
+
+[class*="wp-image"] { border-radius: $brand-round; }
+
+.cms-content a {
+	@extend .hover-underline;
+}
+
+// Force images with width and height set in HTML to not be bigger than their containers
+img[width] {
+	max-width:100%;
+}
+img[height] {
+	height:auto;
+}

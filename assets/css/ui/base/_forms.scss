@@ -1,0 +1,230 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+form {
+	@extend .cf;
+}
+fieldset {
+	border:0;
+	padding:0;
+}
+.form__field {
+	position:relative;
+	margin-bottom:$base-spacing-unit / 2;
+}
+.form__field--flush {
+	margin-bottom:0;
+}
+
+input,
+button,
+textarea {
+	border: none;
+	outline: none; }
+
+textarea {
+	min-height: 120px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+ /*--------------------*\
+    $INPUTS
+\*--------------------*/
+.form__input {
+	vertical-align:top;
+	padding:$half-spacing-unit;
+	border:1px solid;
+	border-radius:$brand-round;
+	transition: background-color .2s;
+	background-color:transparent;
+	cursor:text;
+}
+.form__input--round {
+	border-radius:$base-spacing-unit;
+}
+.form__input--light {
+	background-color:$form-bg;
+	color:$primary-dark;
+	border:none;
+	@include form-shadow($form-border);
+
+	&::placeholder {
+		color:$primary;
+	}
+
+	&:focus {
+		background-color:scale-color($form-bg, $lightness: -5%);
+
+		& + .form__btn {
+			background-color:$secondary;
+
+			&:hover {
+				background-color:$secondary;
+			}
+		}
+	}
+}
+
+/* Not using these ones yet but keeping the setup
+.form__input--dark {
+	border-color:$primary-dark;
+
+	& + .form__btn {
+		border-color:$primary-dark;
+	}
+
+	&::placeholder {
+		color:$primary;
+	}
+
+	&:focus {
+		background-color:white;
+
+		& + .form__btn {
+			background-color:$tertiary;
+
+			&:hover {
+				background-color:$tertiary;
+			}
+		}
+	}
+}
+.form__input--white {
+	border-color:#fff;
+	color:$secondary;
+	background-color:#fff;
+
+	& + .form__btn {
+		color:#fff;
+		border-color:#fff;
+
+		&:hover {
+			background-color:$secondary;
+		}
+	}
+
+	&::placeholder {
+		color:$secondary;
+	}
+}
+.form__input--secondary {
+	border-color:$secondary;
+	color:$secondary;
+	background-color:#fff;
+
+	& + .form__btn {
+		color:$secondary;
+		border-color:$secondary;
+
+		&:hover {
+			background-color:$secondary;
+			color:#fff;
+		}
+	}
+
+	&::placeholder {
+		color:$secondary;
+	}
+}
+*/
+
+.form__input--full, .form__field--full {
+	display:block;
+	width:100%;
+}
+.form__input--half, .form__field--half {
+	display:inline-block;
+	width:50%;
+
+	&:nth-of-type(odd) {
+		padding-right:$base-spacing-unit / 2;
+	}
+
+	@include media-query(portable) {
+		width:100%;
+	}
+}
+.form__input--text, .form__input--textarea {
+	cursor:text;
+}
+
+ /*--------------------*\
+    $LABELS
+\*--------------------*/
+.form__label {
+	font-weight:$medium;
+	line-height: 2;
+}
+.form__label--inside {
+	position:absolute;
+	top:50%;
+	left:$base-spacing-unit;
+	line-height:0;
+}
+
+ /*--------------------*\
+    $BUTTONS
+\*--------------------*/
+.form__btn {
+	float:right;
+  	cursor:pointer;
+  	border-radius:$brand-round;
+}
+.form__btn--inline {
+	position:absolute;
+	top:0;
+	right:0;
+	padding-right:$base-spacing-unit;
+	padding-left:$base-spacing-unit;
+	line-height:inherit;
+	height:100%;
+	border:1px solid;
+	border-radius:$base-spacing-unit;
+}
+.form__submit--search {
+	position:absolute;
+	top:0;
+	right:$base-spacing-unit / 2;
+	width:18px;
+	height:100%;
+	background-color:transparent;
+}
+
+ /*--------------------*\
+    $JETPACK
+\*--------------------*/
+.contact-form {
+
+	> div {
+		@extend .form__field;
+	}
+
+	input, textarea {
+		border-radius:$brand-round;
+	}
+
+	input:not([type="submit"]), textarea {
+		@extend .form__input;
+		@extend .form__input--full;
+		@extend .form__input--light;
+	}
+
+	input[type="submit"] {
+		@extend .form__btn;
+		@extend .btn;
+		@extend [class*="--background-secondary"];
+	}
+
+	textarea {
+		max-height:200px;
+	}
+
+	label {
+		margin-bottom:$base-spacing-unit / 4;
+		
+		span {
+			margin-left:4px;
+		}
+	}
+}

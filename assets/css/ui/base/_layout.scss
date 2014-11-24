@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+
+/**
+* Set our main wrapper to a percentage width and set any child wrappers to auto width with some padding so they are consistent with each other
+*/
+.wrapper {
+	max-width:$site-max-width;
+	width:$site-width;
+	margin-right:auto;
+	margin-left:auto;
+	position:relative;
+	height:100%;
+
+	.wrapper {
+		width:auto;
+		padding-left:$base-spacing-unit;
+		padding-right:$base-spacing-unit;
+	}
+
+	.wrapper--stretch {
+		width:100%;
+	}
+  
+  // May need a better name
+	.wrapper--double {
+  	padding-left: $base-spacing-unit * 2;
+  	padding-right: $base-spacing-unit * 2;
+  }
+  
+  .wrapper--double-left {
+    padding-left: $base-spacing-unit * 2;
+  }
+  
+	@include media-query(portable) {
+		width:$site-width - 5;
+	}
+}
+
+.wrapper--thin {
+	max-width:$site-narrow-width;
+}
+.wrapper--x-thin {
+	max-width:$site-x-narrow-width;
+}
+.wrapper--flush-right {
+	margin-right:0;
+}
+.wrapper--flush-left {
+	margin-left:0;
+}
+.content-cols {
+	@include column-gap($base-spacing-unit * 2);
+	
+	>p {
+		-webkit-column-break-inside: avoid;
+          		page-break-inside: avoid;
+               	break-inside: avoid;
+	}
+}
+.content-cols--max-3 {
+	@include columns(($content-max-width / 3) 1);
+
+	@include media-query(lap-and-up) {
+		@include column-count(2)
+	}
+
+	@include media-query(desk-wide) {
+		@include column-count(3);
+	}
+}
+.content-cols--max-2 {
+	@include columns(($content-max-width / 2) 1);
+
+	@include media-query(lap-and-up) {
+		@include column-count(2)
+	}
+}

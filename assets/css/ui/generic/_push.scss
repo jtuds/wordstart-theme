@@ -1,0 +1,19 @@
+ /*------------------------------------*\
+    $PUSH
+\*------------------------------------*/
+/**
+ * Extra breakpoints for use in the grid
+ * These breakpoints will override default inuit breakpoints if a clash occurs
+ */
+@media ($breakpoint-medium) {
+	@include push-setup("medium-")
+}
+@media ($breakpoint-medium-max) {
+	@include push-setup("medium-max")
+}
+@media ($breakpoint-wide-medium) {
+	@include push-setup("wide-medium-")
+}
+@media ($breakpoint-wide-medium-max) {
+	@include push-setup("wide-medium-max")
+}

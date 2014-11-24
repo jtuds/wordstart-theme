@@ -1,0 +1,14 @@
+ /*------------------------------------*\
+    $Z-INDEX
+\*------------------------------------*/
+/**
+* Set all z-indexes here and refer to this file in the original SCSS file by simply setting the value to sett within a comment, e.g.
+* .example {
+	display:block;
+	color:red;
+	// z-index:auto;
+}
+*/
+.sub-menu {
+	z-index:10;
+}

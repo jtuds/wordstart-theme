@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    $TYPOGRAPHY
+\*------------------------------------*/
+html {
+	@include media-query(portable) {
+		font-size:0.8em;
+	}
+}
+p, li, .btn, .textwidget, td, th { 
+	font-family: $brand-face;
+}
+p {
+	@include hyphens(auto);
+	hyphenate-limit-lines: 2;
+	hyphenate-limit-chars: 6 3 2;
+	-webkit-hyphenate-character: "\2010";
+	hyphenate-character: "\2010";
+
+	&.p--tight {
+		margin-bottom:$base-spacing-unit / 2;
+	}
+
+	&.p--x-tight {
+		margin-bottom:$base-spacing-unit / 4;
+	}
+}
+
+.milli-size {
+	font-size:$milli-size;
+}
+.giga-size {
+	font-size:$giga-size;
+}
+.mega-size {
+	font-size:$mega-size;
+}
+.kilo-size {
+	font-size:$kilo-size;
+}
+
+// These are mainly for links because the heading class colours override the link class colours
+.h1-size {
+	font-size:$h1-size;
+}
+.h2-size {
+	font-size:$h2-size;
+}
+.h3-size {
+	font-size:$h3-size;
+}
+.h4-size {
+	font-size:$h4-size;
+}
+.h5-size {
+	font-size:$h5-size;
+}
+.h6-size {
+	font-size:$h6-size;
+}

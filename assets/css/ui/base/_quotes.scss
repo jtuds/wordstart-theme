@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    $QUOTES
+\*------------------------------------*/
+blockquote {
+	font-style:italic;
+	font-style:normal;
+	quotes: '\201C' '201D' "\2018" "\2019";
+	text-indent:0;
+
+	p:before, p:after {
+		font-family:sans-serif;
+	}
+
+    p:before{
+        content:'\201C';
+        float:left;
+        line-height:80%;
+        margin-right:$base-spacing-unit / 2;
+        font-size:em(140px);
+        color:$primary-dark;
+    }
+    p:after{
+        content:'';
+        content:no-close-quote;
+    }
+
+    q:before{
+        content:"\2018";
+    }
+    q:after{
+        content:"2019";
+    }
+
+	p:last-of-type {
+		margin-bottom:$base-spacing-unit / 4;
+	}
+}
+
+cite {
+	font-style:normal;
+}

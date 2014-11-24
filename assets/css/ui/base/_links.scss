@@ -1,0 +1,61 @@
+/*------------------------------------*\
+    $LINKS
+\*------------------------------------*/
+a {
+	color:$secondary;
+	text-decoration:none;
+	transition: .2s $brand-cubic-bezier;
+
+  &:hover, &:focus {}
+}
+
+a.not-default-link {
+  color:inherit;
+}
+
+
+[data-href] {
+  p, #{$heading-selectors}, a {
+    transition: .2s $brand-cubic-bezier;
+  }
+  
+  &:hover,
+  &:focus {
+    p, #{$heading-selectors}, a {
+      opacity: .8;
+    }
+  }
+}
+
+// need a better way of overriding it
+.feature-box[data-href] {
+  &:hover,
+  &:focus {
+    p, #{$heading-selectors}, a {
+      opacity: 1;
+    }
+  }
+}
+
+.hover-underline {
+  position: relative;
+  
+	&, * { 
+	  text-decoration:none;
+  }
+	
+	&:before {
+	  content: "";
+  	display: block;
+  	position: absolute;
+    bottom: 0;
+  	height: 1px;
+  	background: transparent;
+  	transition: .2s;
+  }
+	
+	&:hover,
+	&:focus { &:before {
+  	background: $primary;
+	} }
+}

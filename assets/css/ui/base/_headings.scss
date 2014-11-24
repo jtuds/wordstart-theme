@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    $HEADINGS
+\*------------------------------------*/
+#{$heading-selectors} {
+	color:$primary-dark;
+}
+h1,.alpha{
+    font-weight:$bold;
+    font-family:$brand-face;
+   	line-height: 1.2;
+}
+h2,.beta,h3,.gamma,h4,.delta,h5,.epsilon,h6,.zeta{
+  font-weight:$medium;
+}
+
+.heading--alt {
+  font-weight:$light;
+  text-transform:uppercase;
+  font-size:90%;
+  letter-spacing:2px;
+}
+.heading--tight {
+	margin-bottom:$base-spacing-unit / 2;
+}
+.heading--loose {
+	margin-bottom:$base-spacing-unit * 2;
+}
+.heading--flush {
+	margin-bottom:0;
+}

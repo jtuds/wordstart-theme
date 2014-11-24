@@ -1,0 +1,311 @@
+/*------------------------------------*\
+    $WIDTHS
+\*------------------------------------*/
+/**
+ * Sizes in human readable format. These are used in conjunction with other
+ * objects and abstractions found in inuit.css, most commonly the grid system
+ * and faux flexbox.
+ *
+ * We have a mixin to generate our widths and their breakpoint-specific
+ * variations.
+ */
+
+@mixin grid-setup($namespace: "") {
+    /**
+    * Whole
+    */
+    .#{$namespace}one-whole         { width:100%; }
+
+
+    /**
+    * Halves
+    */
+    .#{$namespace}one-half          { width:50%; }
+
+
+    /**
+    * Thirds
+    */
+    .#{$namespace}one-third         { width:33.333%; }
+    .#{$namespace}two-thirds        { width:66.666%; }
+
+
+    /**
+    * Quarters
+    */
+    .#{$namespace}one-quarter       { width:25%; }
+    .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
+    .#{$namespace}three-quarters    { width:75%; }
+
+
+    /**
+    * Fifths
+    */
+    .#{$namespace}one-fifth         { width:20%; }
+    .#{$namespace}two-fifths        { width:40%; }
+    .#{$namespace}three-fifths      { width:60%; }
+    .#{$namespace}four-fifths       { width:80%; }
+
+
+    /**
+    * Sixths
+    */
+    .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}two-sixths        { @extend .#{$namespace}one-third; }
+    .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}five-sixths       { width:83.333%; }
+
+
+    /**
+    * Eighths
+    */
+    .#{$namespace}one-eighth        { width:12.5%; }
+    .#{$namespace}two-eighths       { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}three-eighths     { width:37.5%; }
+    .#{$namespace}four-eighths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}five-eighths      { width:62.5%; }
+    .#{$namespace}six-eighths       { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}seven-eighths     { width:87.5%; }
+
+
+    /**
+    * Tenths
+    */
+    .#{$namespace}one-tenth         { width:10%; }
+    .#{$namespace}two-tenths        { @extend .#{$namespace}one-fifth; }
+    .#{$namespace}three-tenths      { width:30%; }
+    .#{$namespace}four-tenths       { @extend .#{$namespace}two-fifths; }
+    .#{$namespace}five-tenths       { @extend .#{$namespace}one-half; }
+    .#{$namespace}six-tenths        { @extend .#{$namespace}three-fifths; }
+    .#{$namespace}seven-tenths      { width:70%; }
+    .#{$namespace}eight-tenths      { @extend .#{$namespace}four-fifths; }
+    .#{$namespace}nine-tenths       { width:90%; }
+
+
+    /**
+    * Twelfths
+    */
+    .#{$namespace}one-twelfth       { width:8.333%; }
+    .#{$namespace}two-twelfths      { @extend .#{$namespace}one-sixth; }
+    .#{$namespace}three-twelfths    { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}four-twelfths     { @extend .#{$namespace}one-third; }
+    .#{$namespace}five-twelfths     { width:41.666% }
+    .#{$namespace}six-twelfths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}seven-twelfths    { width:58.333%; }
+    .#{$namespace}eight-twelfths    { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}nine-twelfths     { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}ten-twelfths      { @extend .#{$namespace}five-sixths; }
+    .#{$namespace}eleven-twelfths   { width:91.666%; }
+
+    /**
+    * Panels
+    */
+    .#{$namespace}panel {
+		min-height:100%;
+		padding-top:$base-spacing-unit * 4;
+		padding-bottom:$base-spacing-unit * 4;
+        margin-bottom:$base-spacing-unit * 2;
+    
+    // Hopefully is ok
+    p:last-child { margin-bottom: 0; }
+    
+		@include media-query(portable) {
+			padding-top:$base-spacing-unit * 3;
+			padding-bottom:$base-spacing-unit * 3;
+            margin-bottom:$base-spacing-unit / 2;
+		}
+	}
+	
+    .#{$namespace}panel--double {
+    	padding-top:$base-spacing-unit * 8;
+		padding-bottom:$base-spacing-unit * 8;
+
+		@include media-query(portable) {
+			padding-top:$base-spacing-unit * 6;
+			padding-bottom:$base-spacing-unit * 6;
+		}
+	}
+	.#{$namespace}panel--half {
+		padding-top:$base-spacing-unit * 2;
+		padding-bottom:$base-spacing-unit * 2;
+
+		@include media-query(portable) {
+			padding-top:$base-spacing-unit;
+			padding-bottom:$base-spacing-unit;
+		}
+	}
+	.#{$namespace}panel--half-top {
+		padding-top:$base-spacing-unit * 2;
+
+		@include media-query(portable) {
+			padding-top:$base-spacing-unit;
+		}
+	}
+	.#{$namespace}panel--half-bottom {
+		padding-bottom:$base-spacing-unit * 2;
+
+		@include media-query(portable) {
+			padding-bottom:$base-spacing-unit;
+		}
+	}
+    .#{$namespace}panel--quarter-top {
+        padding-top:$base-spacing-unit;
+
+        @include media-query(portable) {
+            padding-top:$base-spacing-unit / 1.5;
+        }
+    }
+    .#{$namespace}panel--quarter-bottom {
+        padding-bottom:$base-spacing-unit;
+
+        @include media-query(portable) {
+            padding-bottom:$base-spacing-unit / 1.5;
+        }
+    }
+    .#{$namespace}panel--tight {
+        padding-top:$base-spacing-unit;
+        padding-bottom:$base-spacing-unit;
+
+        @include media-query(portable) {
+            padding-top:$base-spacing-unit / 2;
+            padding-bottom:$base-spacing-unit / 2;
+        }
+    }
+    .#{$namespace}panel--tight-top {
+        padding-top:$base-spacing-unit;
+
+        @include media-query(portable) {
+            padding-top:$base-spacing-unit / 2;
+        }
+    }
+    .#{$namespace}panel--tight-bottom {
+        padding-bottom:$base-spacing-unit;
+
+        @include media-query(portable) {
+            padding-bottom:$base-spacing-unit / 2;
+        }
+    }
+    .#{$namespace}panel--x-tight {
+        padding-top:$base-spacing-unit / 2;
+        padding-bottom:$base-spacing-unit / 2;
+
+        @include media-query(portable) {
+            padding-top:$base-spacing-unit / 4;
+            padding-bottom:$base-spacing-unit / 4;
+        }
+    }
+	.#{$namespace}panel--push-top {
+		padding-top:$base-spacing-unit * 8;
+
+		@include media-query(portable) {
+			padding-top:$base-spacing-unit * 6;
+		}
+	}
+	.#{$namespace}panel--push-bottom {
+		padding-bottom:$base-spacing-unit * 8;
+
+		@include media-query(portable) {
+			padding-bottom:$base-spacing-unit * 6;
+		}
+	}
+     .#{$namespace}panel--flat {
+        margin-bottom:0;
+    }
+	.#{$namespace}panel--flush {
+		padding-top:0;
+		padding-bottom:0;
+	}
+	.#{$namespace}panel--flush-top {
+		padding-top:0;
+	}
+	.#{$namespace}panel--flush-bottom {
+		padding-bottom:0;
+	}
+}
+
+@include grid-setup();
+
+
+
+/**
+ * If you have set `$responsive` to ‘true’ in `_vars.scss` then you now have
+ * access to these classes. You can define at which breakpoint you’d like an
+ * element to be a certain size, e.g.:
+ *
+ * `<div class="g  one-quarter  lap-one-half  palm-one-whole"> ... </div>`
+ *
+ * This would create a `div` that, at ‘desktop’ sizes, takes up a quarter of the
+ * horizontal space, a half of that space at ‘tablet’ sizes, and goes full width
+ * at ‘mobile’ sizes.
+ *
+ * Demo: jsfiddle.net/inuitcss/WS4Ge
+ *
+ */
+
+@if $responsive == true{
+
+@include media-query(palm){
+    @include grid-setup("palm-");
+}
+
+@include media-query(lap){
+    @include grid-setup("lap-");
+}
+
+@include media-query(lap-and-up){
+    @include grid-setup("lap-and-up-");
+}
+
+@include media-query(portable){
+    @include grid-setup("portable-");
+}
+
+@include media-query(desk-narrow){
+    @include grid-setup("desk-narrow-");
+}
+
+@include media-query(desk){
+    @include grid-setup("desk-");
+}
+
+
+/**
+ * If you have set the additional `$responsive-extra` variable to ‘true’ in
+ * `_vars.scss` then you now have access to the following class available to
+ * accomodate much larger screen resolutions.
+ */
+
+@if $responsive-extra == true{
+
+@include media-query(desk-wide){
+    @include grid-setup("desk-wide-");
+}
+
+}
+
+} /* endif */
+
+
+/**
+ * Extra breakpoints for use in the grid
+ * These breakpoints will override default inuit breakpoints if a clash occurs
+ */
+@media ($breakpoint-medium) {
+	@include grid-setup("medium-")
+}
+@media ($breakpoint-medium-max) {
+	@include grid-setup("medium-max-")
+}
+@media ($breakpoint-wide-medium) {
+	@include grid-setup("wide-medium-")
+}
+@media ($breakpoint-wide-medium-max) {
+	@include grid-setup("wide-medium-max-")
+}
+@media ($breakpoint-wide) {
+    @include grid-setup("wide-")
+}
+@media ($breakpoint-wide-max) {
+    @include grid-setup("wide-max-")
+}
