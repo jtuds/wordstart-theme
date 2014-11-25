@@ -132,7 +132,7 @@ module.exports = function(grunt) {
 			// Concat JS
 			concat: {
 				dist: {
-					src: ['dist/js/*.js'],
+					src: ['dist/js/!(global).js'],
 					dest: 'dist/js/global.js',
 				}
 			},
@@ -151,7 +151,7 @@ module.exports = function(grunt) {
 
 			    dist: {
 			        // [REQUIRED] Path to the build you're using for development.
-			        "devFile" : "assets/js/modernizr.js",
+			        "devFile" : "bower_components/modernizr/modernizr.js",
 
 			        // Path to save out the built file.
 			        "outputFile" : "assets/js/modernizr-custom.js",
