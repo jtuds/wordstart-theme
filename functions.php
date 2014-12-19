@@ -489,6 +489,9 @@ function remove_grunion_style() {
 }
 add_action('wp_print_styles', 'remove_grunion_style');
 
+// Change JPEG upload compression
+add_filter( 'jpeg_quality', create_function( '', 'return 70;' ) );
+
 /*------------------------------------*\
     Per project variable functions
 \*------------------------------------*/
