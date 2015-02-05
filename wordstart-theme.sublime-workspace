@@ -1,0 +1,273 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"scroll",
+				"scrollPosition"
+			],
+			[
+				"scrol",
+				"scrollPosition"
+			],
+			[
+				"ligh",
+				"lighten	Sass-function"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: comment-divs"
+			]
+		],
+		"width": 464.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/bannister-preston/wp-config.php",
+		"/C/xampp/htdocs/bannister-preston/wp-content/themes/bannister/wp-config.php",
+		"/C/xampp/htdocs/bannister-preston/local-config.php",
+		"/C/xampp/htdocs/bannister-preston/wp-content/themes/bannister/local-config.php",
+		"/C/Users/jtudsbury/Documents/Work/Misc/Javascript/objects.html",
+		"/C/xampp/htdocs/misc/php/classes.php",
+		"/C/xampp/htdocs/misc/javascript/geolocation/geolocation.html",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/global/mailer.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/page-contact.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/index.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/assets/js/plugins.js",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/page-products.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/objects/enquiry-form.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/Gruntfile.js",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/dist/js/plugins.src.js",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/functions.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/global/head.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/assets/css/ui/base/_forms.scss",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/assets/css/_vars.scss",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/objects/contact-form.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/objects/subscribe.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/comments.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/page-support.php",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/global/custom-post-types.php",
+		"/C/xampp/htdocs/fortis/fortis_students/wp-content/themes/made_of_stone/single-fp_properties.php",
+		"/C/Users/jtudsbury/AppData/Local/Temp/fz3temp-1/functions.php",
+		"/C/Users/jtudsbury/AppData/Local/Temp/fz3temp-1/plugins.js",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/dist/js/plugins.js",
+		"/C/xampp/htdocs/spiraltech/wp-content/themes/technologic/inc/global/footer.php",
+		"/C/Users/jtudsbury/AppData/Local/Temp/fz3temp-1/main.css",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/objects/_tiles.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/_vars.scss",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/User/ColorHighlighter.sublime-settings",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/base/_headings.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/objects/_panels.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/base/_lists.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/functions.php",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/template-products-list.php",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/inc/objects/panels/our-products.php",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/front-page.php",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/inc/objects/panels/its-english-lakes.php",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/inuit.css/base/_headings.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/.sass-cache/f82a483c3447481bd1caea5758aaa63bc888e490/_headings.scssc",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/base/_typography.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/Gruntfile.js",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/objects/_footer.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/base/_links.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/objects/_nav.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/inuit.css/generic/_mixins.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/inuit.css/_defaults.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/inuit.css/generic/_widths.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/inuit.css/generic/_helper.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/config.rb",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/Gruntfile.js",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/assets/css/ui/generic/_mixins.scss",
+		"/C/xampp/htdocs/englishlakes/wp-content/themes/ninetynine/dist/itslakes-small@2x.jpg",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/page.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/page-sectors-and-industries.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/single-sectors_industries.php",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/C/xampp/htdocs/tekneek/wp-config.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/template-sectors_industries.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/functions.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/inc/global/footer.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/sidebar-footer-form.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/inc/global/custom-post-types.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/inc/global/header.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/footer.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/template-generic.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/template-simple.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/style.css",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/page-contact.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/dist/css/style.css",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/template-services.php",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/front-page.php",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/Color Scheme - Default/mghDreamweaver.tmTheme",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/zie.scss",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/style.scss",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/objects/_button.scss",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/objects/_entry.scss",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/site/_base.scss",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/Color Scheme - Default/Tomorrow.tmTheme",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/Color Highlighter/ColorHighlighter.sublime-settings",
+		"/C/xampp/htdocs/tekneek/wp-content/themes/tekallica/assets/sass/framework/_base.scss",
+		"/C/Users/jtudsbury/Downloads/test.html",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/Text/comment-divs.sublime-snippet",
+		"/C/Users/jtudsbury/AppData/Roaming/Sublime Text 2/Packages/User/comment-divs.sublime-snippet"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\xampp\\htdocs\\spiraltech\\wp-content\\themes\\technologic\\inc",
+			"C:\\xampp\\htdocs\\spiraltech\\wp-content\\themes\\technologic",
+			"C:\\xampp\\htdocs\\englishlakes\\wp-content\\themes\\ninetynine\\assets\\css\\ui",
+			"C:\\xampp\\htdocs\\englishlakes\\wp-content\\themes\\ninetynine",
+			"C:\\xampp\\htdocs\\englishlakes\\wp-content\\themes\\ninetynine\\assets\\css\\inuit.css",
+			"C:\\xampp\\htdocs\\englishlakes\\wp-content\\themes\\ninetynine"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"form__input",
+			"box-s",
+			"do_shortcode",
+			"font",
+			"span",
+			"_2x",
+			"srcset",
+			"desk-wide",
+			"import",
+			"impport",
+			"breakpoint",
+			"watch",
+			"half-bott",
+			"wp_nav_menu",
+			"menu"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"div"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"headings",
+				"wp-content/themes/ninetynine/assets/css/inuit.css/base/_headings.scss"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/xampp/htdocs/wordstart/wordstart.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 320.0,
+	"status_bar_visible": true
+}
