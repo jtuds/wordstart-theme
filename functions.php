@@ -555,6 +555,12 @@ function dist_url() {
   echo get_template_directory_uri() . '/dist';
 }
 
+// Produce a pretty link from a post ID
+function dynamic_link($id) {
+    $link = get_permalink($id);
+    echo $link;
+}
+
 // Truncate words
 function truncate_words($text, $limit, $ellipsis = '&hellip;') {
     $words = preg_split("/[\n\r\t ]+/", $text, $limit + 1, PREG_SPLIT_NO_EMPTY|PREG_SPLIT_OFFSET_CAPTURE);
