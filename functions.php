@@ -556,9 +556,10 @@ function dist_url() {
 }
 
 // Produce a pretty link from a post ID
-function dynamic_link($id) {
+function dynamic_link($id, $return = false) {
     $link = get_permalink($id);
-    echo $link;
+    if($return === true) return $link;
+    else echo $link;
 }
 
 // Truncate words
