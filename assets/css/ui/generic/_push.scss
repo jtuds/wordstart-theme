@@ -2,8 +2,7 @@
     $PUSH
 \*------------------------------------*/
 /**
- * Extra breakpoints for use in the grid
- * These breakpoints will override default inuit breakpoints if a clash occurs
+ * Inuit.css sets up push and push classes but only for the main breakpoints, here we extend it to the others
  */
 @media ($breakpoint-medium) {
 	@include push-setup("medium-")
@@ -16,4 +15,39 @@
 }
 @media ($breakpoint-wide-medium-max) {
 	@include push-setup("wide-medium-max")
+}
+
+/**
+ * Each push class is enabled individually in _vars.scss. Here we check whether it is enabled and set up the classes if so
+ */
+@if $breakpoint-medium-push == true{
+
+    @media ($breakpoint-medium) {
+		@include push-setup("medium-")
+	}
+
+}
+
+@if $breakpoint-medium-max-push == true{
+
+    @media ($breakpoint-medium-max) {
+		@include push-setup("medium-max")
+	}
+
+}
+
+@if $breakpoint-wide-medium-push == true{
+
+    @media ($breakpoint-wide-medium) {
+		@include push-setup("wide-medium-")
+	}
+
+}
+
+@if $breakpoint-wide-medium-max-push == true{
+
+    @media ($breakpoint-wide-medium-max) {
+		@include push-setup("wide-medium-max")
+	}
+
 }

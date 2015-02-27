@@ -1,6 +1,7 @@
 /*------------------------------------*\
     VARS.SCSS
 \*------------------------------------*/
+
 /**
  * Any variables you find set in inuit.css’ `_vars.scss` that you do not wish to
  * keep, simply redefine here. This means that if inuit.css, for example, sets
@@ -10,12 +11,17 @@
  * having to alter the framework itself.
  */
 
+
+
+
+
 /*------------------------------------*\
     MEDIA QUERIES REFERENCE
 \*------------------------------------*/
+
 /** 
  * A reference to the inuit media queries setup
- * These show the widths set in the default settings in inuit/_defaults.scss
+ * These examples show the widths set in the default settings in inuit/_defaults.scss which can be changed in this file
  * Usage example @include media-query(palm) {}
 
     @include media-query(palm) {
@@ -58,17 +64,49 @@
         max-width = 1199px (desk-wide-start - 1)
     }
 
+    @media ($breakpoint-medium) {
+    @include grid-setup("medium-")
+}
+
+/**
+ * Extra breakpoints for use in the grid
+ * These breakpoints will override default inuit breakpoints if a clash occurs
+ 
+    @media ($breakpoint-medium) {
+        @include grid-setup("medium-")
+    }
+    @media ($breakpoint-medium-max) {
+        @include grid-setup("medium-max-")
+    }
+    @media ($breakpoint-wide-medium) {
+        @include grid-setup("wide-medium-")
+    }
+    @media ($breakpoint-wide-medium-max) {
+        @include grid-setup("wide-medium-max-")
+    }
+    @media ($breakpoint-wide) {
+        @include grid-setup("wide-")
+    }
+    @media ($breakpoint-wide-max) {
+        @include grid-setup("wide-max-")
+    }
 */
+
+
+
+
 
 /*------------------------------------*\
     $OBJECTS-AND-ABSTRACTIONS
 \*------------------------------------*/
+
 /**
  * All of inuit.css’ objects and abstractions are initially turned off by
  * default. This means that you start any project with as little as possible,
  * and introducing objects and abstractions is as simple as switching the
  * following variables to `true`.
  */
+
 $use-grids:         true;
 $use-flexbox:       false;
 $use-columns:       false;
@@ -96,24 +134,39 @@ $use-greybox:       false;
 
 
 
+
+
 /*------------------------------------*\
     $OVERRIDES
 \*------------------------------------*/
+
 /**
  * Place any variables that should override inuit.css’ defaults here.
+ */
+
+
+
+
 
  /*------------------------------------*\
     $DEBUG
 \*------------------------------------*/
+
 /**
  * Debug mode will visually highlight any potential markup/accessibility quirks
  * in the browser. Set to `true` or `false`.
  */
+
 $debug-mode:false;
  
+
+
+
+
  /*------------------------------------*\
     $BRAND
 \*------------------------------------*/
+
 /**
  * Brand stuff
  */
@@ -129,38 +182,70 @@ $brand-round: 2px;
 
 $brand-cubic-bezier: cubic-bezier(.6, .15, .2, 1);
 
+
+
+
+
 /*------------------------------------*\
     $RESPONSIVE
 \*------------------------------------*/
+
 $responsive-extra:true;
+
+
+
+
 
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
+
 /**
  * Place any of your own variables that sit on top of inuit.css here.
  */
+
 $transitionable-prefixed-values: transform, transform-origin, filter;
 $heading-selectors: 'h1,h2,h3,h4,h5,h6,.alpha,.beta,.gamma,.delta,.epsilon,.zeta';
+
+
+
+
 
  /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
-$site-max-width: 67.5em; //80em;
+
+$site-max-width: 67.5em;
 $site-narrow-width: 67.5em;
 $site-x-narrow-width: 55em;
 $site-width:95%;
 $content-max-width:46em;
 $paragraph-max-width: 35em;
-   
+
+
+
+
+ 
  /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
 
 /**
+ * Tell inuit.css when breakpoints start.
+ * Usage example @include media-query(palm) {}
+ */
+
+$lap-start:         481px!default;
+$desk-narrow-start: 960px!default;
+$desk-start:        1024px!default;
+$desk-wide-start:   1200px!default;
+
+/**
+ * Set extra breakpoints
  * Usage example @media ($breakpoint-medium) {}
  * Can be used in the grid setup - see generic/_widths..scss
  */
+
 $breakpoint-medium: unquote("min-width: 37.5em");
 $breakpoint-medium-max: unquote("max-width: 37.49em");
 $breakpoint-wide-medium: unquote("min-width: 48em");
@@ -176,33 +261,27 @@ $nav-width-max: ($nav-width - 1);
 $breakpoint-nav: unquote("min-width: #{$nav-width}");
 $breakpoint-nav-max: unquote("max-width: #{($nav-width - 1)}");
 
+
+
+
+
  /*------------------------------------*\
     $FONT WEIGHTS
 \*------------------------------------*/
+
 $bold:700;
 $medium:600;
 $light:500;
 $extra-light:400;
 
+
+
+
+
  /*------------------------------------*\
     $FONT SIZES
 \*------------------------------------*/
-/*
-panel titles, large buttons
-24px
 
-footer titles
-18px
-
-paragraph, featured products, sub menu links
-16px
-
-small caps, main navigation links
-14px
-
-footer copyright/links
-12px
-*/
 
 $giga-size:         60px!default;
 $mega-size:         48px!default;
@@ -218,9 +297,14 @@ $h6-size:           16px!default; // .zeta
 $milli-size:        12px!default;
 $micro-size:        10px!default;
 
+
+
+
+
  /*------------------------------------*\
     $COLORS
 \*------------------------------------*/
+
 $primary: #9099a3; // grey blue, generally text, footer links, etc
 $primary-dark: #556270; // footer headings, submenu, navigation
 $secondary: $brand-color; // main blue, white panel headings, majority of button bgs
@@ -246,13 +330,20 @@ $form-border-alt: $secondary-dark;
 
 $secondary-gradient:linear-gradient(135deg, #42b1c4, #3388bb 66%);
 
+
+
+
+
  /*------------------------------------*\
     $BACKGROUNDS
 \*------------------------------------*/
 
+
+
  /*--------------------*\
     $SOLIDS
 \*--------------------*/
+
 [class*="--background-white"] {
     background-color:white; //999999
     color:$primary;
@@ -366,6 +457,10 @@ $secondary-gradient:linear-gradient(135deg, #42b1c4, #3388bb 66%);
     }
 }
 
+
+
+
+
  /*------------------------------------*\
     $FOREGROUNDS
 \*------------------------------------*/
@@ -383,9 +478,12 @@ $secondary-gradient:linear-gradient(135deg, #42b1c4, #3388bb 66%);
   color:$secondary !important;
 }
 
+
+
  /*--------------------*\
     $GRADIENTS
 \*--------------------*/
+
 [class*="--background-secondary-grad"] {
     background:$secondary-gradient;
   color:#fff;
@@ -395,9 +493,12 @@ $secondary-gradient:linear-gradient(135deg, #42b1c4, #3388bb 66%);
     }
 }
 
+
+
  /*--------------------*\
     $IMAGES
 \*--------------------*/
+
 [class*="--background-image-dev"] {
     background-color:$primary; /* fallback colour */
     background-image: image-url('banners/banner.jpg');
@@ -428,9 +529,14 @@ $secondary-gradient:linear-gradient(135deg, #42b1c4, #3388bb 66%);
     }*/
 }
 
+
+
+
+
 /*------------------------------------*\
     $SHADOWS
 \*------------------------------------*/
+
 // shadow variables
 $shadow-color: $primary-dark;
 $shadow-color-light: $primary;
