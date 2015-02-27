@@ -35,7 +35,7 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 20254,
+				"buffer_size": 20315,
 				"line_ending": "Windows"
 			}
 		}
@@ -297,15 +297,15 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 20254,
+						"buffer_size": 20315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								19128,
-								19128
+								19070,
+								19071
 							]
 						],
 						"settings":

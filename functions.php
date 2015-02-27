@@ -419,6 +419,37 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     Custom functions
 \*------------------------------------*/
 
+// Enqueue jQuery via CDN
+function register_jquery() {
+        wp_deregister_script( 'jquery' );
+        wp_register_script( 'jquery', ( '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ), false, null, true );
+        wp_enqueue_script( 'jquery' );
+    }
+add_action( 'wp_enqueue_scripts', 'register_jquery' );
+
+// Enqueue scripts and styles
+function enqueue_theme_scripts_and_styles() 
+{
+    wp_enqueue_style( 'global', get_template_directory_uri() . '/dist/css/style.css', null, '', '' );
+    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/dist/js/modernizr.js', null, '', true );
+
+    // Enqueue page specific scripts and styles
+
+    if (is_singular('example')) {
+        // wp_enqueue_script( 'example', get_template_directory_uri() . '/dist/js/example.js', null, '', true );
+    }
+
+    // Load our scripts file last so we can manipulate any plugins from here
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/dist/js/global.js', null, '', true );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts_and_styles' );
+
+// Dequeue grunion forms CSS
+function remove_grunion_style() {
+     wp_deregister_style('grunion.css');
+}
+add_action('wp_print_styles', 'remove_grunion_style');
+
 // Set contact form success message
 function amgenna_change_grunion_success_message( $msg ) {
 global $contact_form_message;
@@ -483,29 +514,20 @@ function mytheme_custom_type_nav_class($classes, $item) {
   return $classes;
 }
 
-// Dequeue grunion forms CSS
-function remove_grunion_style() {
-     wp_deregister_style('grunion.css');
-}
-add_action('wp_print_styles', 'remove_grunion_style');
-
 // Change JPEG upload compression
 add_filter( 'jpeg_quality', create_function( '', 'return 70;' ) );
 
-/*------------------------------------*\
-    Per project variable functions
-\*------------------------------------*/
-
-// Set URL paths
-
-function getThemePath() {
+// Returns or echo URLs
+function getThemePath($return = false) {
     $url = get_template_directory_uri();
-    echo $url;
+    if ($return === true) return $url;
+    else echo $url;
 }
 
-function getBasePath() {
+function getBasePath($return = false) {
     $url = site_url();
-    echo $url;
+    if ($return === true) return $url;
+    else echo $url;
 }
 
 function getImagePath($return = false)
@@ -515,44 +537,14 @@ function getImagePath($return = false)
   else echo $url;
 }
 
+function dist_url() {
+  echo get_template_directory_uri() . '/dist';
+}
+
 // Variable exists
 function variable_exists($variable)
 {
   return ! empty($variable) && $variable;
-}
-
-// Set custom image sizes
-add_image_size( 'example', 1080, 400, true );
-
-// Enqueue jQuery via CDN
-function register_jquery() {
-        wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', ( '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ), false, null, true );
-        wp_enqueue_script( 'jquery' );
-    }
-add_action( 'wp_enqueue_scripts', 'register_jquery' );
-
-// Enqueue scripts and styles
-function enqueue_theme_scripts_and_styles() 
-{
-    wp_enqueue_style( 'global', get_template_directory_uri() . '/dist/css/style.css', null, '', '' );
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/dist/js/modernizr.js', null, '', true );
-
-    // Enqueue page specific scripts and styles
-
-    if (is_singular('example')) {
-        // wp_enqueue_script( 'example', get_template_directory_uri() . '/dist/js/example.js', null, '', true );
-    }
-
-    // Load our scripts file last so we can manipulate any plugins from here
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/dist/js/global.js', null, '', true );
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts_and_styles' );
-
-// Helper functions
-// ---------------------------
-function dist_url() {
-  echo get_template_directory_uri() . '/dist';
 }
 
 // Produce a pretty link from a post ID
@@ -565,7 +557,7 @@ function dynamic_link($id, $return = false) {
 // Truncate words
 function truncate_words($text, $limit, $ellipsis = '&hellip;') {
     $words = preg_split("/[\n\r\t ]+/", $text, $limit + 1, PREG_SPLIT_NO_EMPTY|PREG_SPLIT_OFFSET_CAPTURE);
-    
+
     if (count($words) > $limit) {
         end($words); //ignore last element since it contains the rest of the string
         $last_word = preg_replace("/\.$/", "", prev($words));
@@ -573,6 +565,9 @@ function truncate_words($text, $limit, $ellipsis = '&hellip;') {
         $text =  substr($text, 0, $last_word[1] + strlen($last_word[0])) . $ellipsis;
     }
     return $text;
-  }
+}
+
+// Set custom image sizes
+add_image_size( 'example', 1080, 400, true );
 
 ?>
