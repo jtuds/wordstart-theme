@@ -12,7 +12,6 @@
 
 <!-- IE stuff -->
 <!--[if lt IE 9]>
-<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 <link rel="stylesheet" href="<?php echo getThemePath(); ?>/dist/css/ie.css">
 <![endif]-->
 

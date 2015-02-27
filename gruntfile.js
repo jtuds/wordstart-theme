@@ -158,7 +158,7 @@ module.exports = function(grunt) {
 
 			        // Based on default settings on http://modernizr.com/download/
 			        "extra" : {
-			            "shiv" : false,
+			            "shiv" : true,
 			            "printshiv" : false,
 			            "load" : true,
 			            "mq" : true,
