@@ -56,6 +56,8 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/wordstart-theme/gruntfile.js",
+		"/C/xampp/htdocs/wordstart-theme/inc/global/head.php",
 		"/C/xampp/htdocs/wordstart-theme/page.php",
 		"/C/xampp/htdocs/wordstart-theme/functions.php",
 		"/C/xampp/htdocs/jrbd/wp-content/themes/wordstart-theme-master/functions.php",
@@ -263,7 +265,7 @@
 		[
 			[
 				"",
-				"/C/xampp/htdocs/bannister-preston/bannister-preston.sublime-project"
+				"/C/xampp/htdocs/jrbd/jrbd.sublime-project"
 			]
 		],
 		"width": 380.0
