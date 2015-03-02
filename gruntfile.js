@@ -303,6 +303,7 @@ module.exports = function(grunt) {
 		grunt.loadNpmTasks('grunt-autoprefixer');
 		grunt.loadNpmTasks("grunt-modernizr");
 		grunt.loadNpmTasks('grunt-bowercopy');
+		grunt.loadNpmTasks('grunt-grunticon');
 
 		// Run bower install
 		grunt.registerTask('bower-install', function() {
