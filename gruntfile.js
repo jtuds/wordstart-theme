@@ -14,11 +14,21 @@ module.exports = function(grunt) {
 	if (environment == "james") {
 		grunt.initConfig({
 
+			path: {
+				assets: 'assets',
+				src: 'src',
+				dist: 'dist',
+				sass: '<%= path.assets %>/css',
+				js: '<%= path.assets %>/js',
+				images: '<%= path.assets %>/images',
+				fonts: '<%= path.assets %>/fonts',
+			},
+
 			// Watches for changes and runs tasks
 			watch : {
 				sass : {
 					files : ['assets/css/**/*.scss'],
-					tasks : (hasSass) ? ['sass:dev'] : null,
+					tasks : (hasSass) ? ['sass:dev', 'autoprefixer'] : null,
 					options : {
 						livereload : true
 					}
@@ -104,15 +114,33 @@ module.exports = function(grunt) {
 
 			// SVG min
 			svgmin: {
-				production : {
-					files: [
-						{
-							expand: true,
-							cwd: 'assets/images',
-							src: '**/*.svg',
-							dest: 'dist/images'
-						}
-					]
+				options: {
+					plugins: [{
+						removeViewBox: false
+					}]
+				},
+				dist: {
+					files: [{
+						expand: true,
+						cwd: '<%= path.images %>',
+						src: ['*.svg'],
+						dest: '<%= path.dist %>/images',
+						ext: '.svg'
+					}]
+				}
+			},
+
+			grunticon: {
+				icons: {
+					files: [{
+						expand: true,
+						cwd: '<%= path.images %>',
+						src : ['*.svg'],
+						dest: '<%= path.dist %>/images'
+					}],
+					options: {
+						cssprefix: '.icon--'
+					}
 				}
 			},
 
