@@ -27,15 +27,16 @@ module.exports = function(grunt) {
 			// Watches for changes and runs tasks
 			watch : {
 				sass : {
-					files : ['assets/css/**/*.scss'],
+					files : ['<%= path.sass %>/*.scss', '<%= path.sass %>/**/*.scss'],
 					tasks : (hasSass) ? ['sass:dev', 'autoprefixer'] : null,
 					options : {
-						livereload : true
+						livereload : true,
+						sourceMap : true
 					}
 				},
 				js : {
 					files : ['assets/js/**/*.js'],
-					tasks : ['jshint'],
+					tasks : ['jshint', 'uglicat'],
 					options : {
 						livereload : true
 					}
@@ -116,7 +117,10 @@ module.exports = function(grunt) {
 			svgmin: {
 				options: {
 					plugins: [{
-						removeViewBox: false
+						removeViewBox: false,
+						collapseGroups: false
+					}, {
+						removeUnknownsAndDefaults: false
 					}]
 				},
 				dist: {
@@ -172,6 +176,18 @@ module.exports = function(grunt) {
 					src: 'dist/css/style.css',
 					dest: 'dist/css/style.css'
 				}
+			},
+
+			cssmin: {
+			  options: {
+			    shorthandCompacting: false,
+			    roundingPrecision: -1
+			  },
+			  target: {
+			    files: {
+			      'dist/css/style.css': ['dist/css/style.css']
+			    }
+			  }
 			},
 
 			// Modernizr build
@@ -271,7 +287,7 @@ module.exports = function(grunt) {
 				arr.push('stylus:production');
 			}
 
-			arr.push('autoprefixer', 'imagemin:production', 'svgmin:production', 'requirejs:production', 'uglify', 'concat', 'modernizr:dist');
+			arr.push('autoprefixer', 'cssmin', 'imagemin:production', 'svgmin:production', 'requirejs:production', 'uglify', 'concat', 'modernizr:dist');
 
 			return arr;
 		});
@@ -294,6 +310,7 @@ module.exports = function(grunt) {
 
 		// Load up tasks	
 		grunt.loadNpmTasks('grunt-sass');
+		grunt.loadNpmTasks('grunt-contrib-cssmin');
 		grunt.loadNpmTasks('grunt-contrib-jshint');
 		grunt.loadNpmTasks('grunt-contrib-watch');
 		grunt.loadNpmTasks('grunt-contrib-uglify');
