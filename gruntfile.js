@@ -164,8 +164,8 @@ module.exports = function(grunt) {
 			// Concat JS
 			concat: {
 				dist: {
-					src: ['dist/js/!(global).js'],
-					dest: 'dist/js/global.js',
+					src: ['dist/js/*.js', '!dist/js/global.js'],
+					dest: 'dist/js/scripts.js',
 				}
 			},
 
