@@ -438,7 +438,6 @@ if (JQUERY_V == '') {
 function enqueue_theme_scripts_and_styles() 
 {
     wp_enqueue_style( 'global', get_template_directory_uri() . '/dist/css/style.css', null, '', '' );
-    wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/dist/js/modernizr.js', null, '', true );
 
     // Enqueue page specific scripts and styles
 

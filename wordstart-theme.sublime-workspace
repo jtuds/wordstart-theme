@@ -43,7 +43,7 @@
 			"file": "functions.php",
 			"settings":
 			{
-				"buffer_size": 20682,
+				"buffer_size": 20686,
 				"line_ending": "Windows"
 			}
 		},
@@ -221,6 +221,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"uglify",
 			"concat",
 			"add_ima",
 			"form__input",
@@ -256,7 +257,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -271,8 +272,8 @@
 						"selection":
 						[
 							[
-								3170,
-								3170
+								3319,
+								3327
 							]
 						],
 						"settings":
@@ -329,7 +330,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1716.0,
+						"translation.y": 3410.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -339,15 +340,15 @@
 					"file": "functions.php",
 					"settings":
 					{
-						"buffer_size": 20682,
+						"buffer_size": 20686,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15693,
-								15100
+								15282,
+								15282
 							]
 						],
 						"settings":
@@ -405,7 +406,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10046.0,
+						"translation.y": 10508.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
