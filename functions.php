@@ -419,13 +419,20 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     Custom functions
 \*------------------------------------*/
 
-// Enqueue jQuery via CDN
-function register_jquery() {
-        wp_deregister_script( 'jquery' );
-        wp_register_script( 'jquery', ( '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' ), false, null, true );
-        wp_enqueue_script( 'jquery' );
-    }
-add_action( 'wp_enqueue_scripts', 'register_jquery' );
+// Define the latest or desired jQuery version
+define('JQUERY_V', '');
+
+if (JQUERY_V == '') {
+    echo ("You haven't defined the jQuery version you want to use. Define the 'JQUERY_V' consant in the functions.php file");
+} else {
+    // Enqueue jQuery via CDN
+    function register_jquery() {
+            wp_deregister_script( 'jquery' );
+            wp_register_script( 'jquery', ( 'https://ajax.googleapis.com/ajax/libs/jquery/' . JQUERY_V . '/jquery.min.js' ), false, null, true );
+            wp_enqueue_script( 'jquery' );
+        }
+    add_action( 'wp_enqueue_scripts', 'register_jquery' );
+}
 
 // Enqueue scripts and styles
 function enqueue_theme_scripts_and_styles() 
