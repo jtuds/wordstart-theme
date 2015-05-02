@@ -439,8 +439,11 @@ function enqueue_theme_scripts_and_styles()
         // wp_enqueue_script( 'example', get_template_directory_uri() . '/dist/js/example.js', null, '', true );
     }
 
-    // Load our scripts file last so we can manipulate any plugins from here
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/dist/js/global.js', null, '', true );
+    // Load concatenated scripts file
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/dist/js/scripts.js', null, '', true );
+    
+    // Load our global file last so we can manipulate any plugins from here
+    wp_enqueue_script( 'global', get_template_directory_uri() . '/dist/js/global.js', null, '', true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts_and_styles' );
 
